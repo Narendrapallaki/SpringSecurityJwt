@@ -28,6 +28,7 @@ public class UserService {
 	}
 
 	public User getUser(String email) {
+		
 		User byEmail = userRepository.findByEmail(email).orElseThrow(() -> new UserIdNotFound("Id not found...!"));
 
 		// System.out.println("get user :"+byEmail);
